@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UrlModule } from './url/url.module';
+import { UrlModule } from './urlhandler/url.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Url } from './url/url.entity';
+import { Url } from './urlhandler/url.entity';
 
 @Module({
   //connecting app to sqlite database
