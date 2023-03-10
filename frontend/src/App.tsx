@@ -7,23 +7,19 @@ function App() {
   const [shortened, setShortened] = useState("");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // prevent default form submission behavior
-    //reset form after submission
-    // setInputValue("");
-    const longUrl = "{" + '"longURL": "' + inputvalue + '" }'
-    console.log(JSON.parse(longUrl));
-    fetch('http://localhost:3000/shorten', {
+    event.preventDefault();
+    setShortened("");
+    //const longUrl = JSON.stringify({ longURL: inputvalue });
+    const data = {longUrl: inputvalue};
+    fetch('https://url-shorterner.jing-xuanxuan2.repl.co/shorten', {
       method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
-      body: JSON.parse(longUrl),
+      body: JSON.stringify(data),
     })
-      .then(
-        // response => response.json()
-        response => console.log(response)
-      )
-      // .then(data => setData(data))
+      .then(response => response.json())
+      .then(data => setShortened(data.shortenedUrlJson))
       .catch(error => console.error(error));
   };
 
@@ -43,6 +39,14 @@ function App() {
           onChange={(e) => setInputValue(e.target.value)} />
         <input className="Submit" type="submit" name="Shorten" />
       </form>
+      {shortened!=""? 
+      <div>
+        <text className="Shortened">
+          {shortened}
+        </text>
+      </div>:
+      <div></div>
+        }
 
     </div>
   );
