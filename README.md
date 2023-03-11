@@ -15,6 +15,13 @@ https://www.google.com/search?q=govtech&sxsrf=AJOqlzVeRZqtIIYpMBaO-zW1mlwumHOOxA
 ### Sample response: 
 https://u.jing-xuanxuan2.repl.co/zm6UfxQ3-Y
 
+## Testing
+2 unit test cases were created to test the POST request, with details as follows:
+1. test if POST request returns a shortened url after giving a long url as a parameter
+2. test if POST request returns error when long url given is invalid
+
+The test cases were made using Jest, and can be found in /backend/src/app.controller.spec.ts
+
 ## Nest.js backend
 The Get and Post requests are created using the Nest.js framework, and connected to a SQLite database. To run, cd backend and follow the instructions on the readme file in /backend.
 
