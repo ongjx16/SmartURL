@@ -1,9 +1,9 @@
 import {
-  BadRequestException,
   Injectable,
   NotFoundException,
   UnprocessableEntityException,
 } from '@nestjs/common';
+import { BadRequestException} from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Url } from './url.entity';
@@ -25,6 +25,7 @@ export class UrlService {
 
     //checks if longurl is a valid URL
     if (!isURL(longUrl)) {
+      console.log('Invalid URL detected');
       throw new BadRequestException('String Must be a Valid URL');
     }
 
@@ -67,4 +68,5 @@ export class UrlService {
       throw new NotFoundException('Resource Not Found');
     }
   }
+  
 }
