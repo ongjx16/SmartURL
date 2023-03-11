@@ -31,4 +31,5 @@ The frontend interface is created with the React.js framework, featuring a simpl
 
 
 
-Note: do ignore the failing checks remark on some of the commits as I was just playing around with the deployment script but forgot to disconnect it after I decided not to use it.
+#### Note: 
+Do ignore the failing checks remark on some of the commits as I was just playing around with the deployment script but forgot to disconnect it after I decided not to use it.
