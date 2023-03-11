@@ -30,8 +30,8 @@ The Get and Post requests are created using the Nest.js framework, and connected
 ## React.js frontend
 The frontend interface is created with the React.js framework, featuring a simple input button to input your long url, and subsequently display the shortened url. Fetch methods were use to execute POST and GET requests to the backend. To run locally, cd frontend and follow the instructions on the readme file in /frontend.
 
-
-
+## Hosting
+The front-end is hosted on Firebase.
 
 #### Note: 
 Do ignore the failing checks remark on some of the commits as I was just playing around with the deployment script but forgot to disconnect it after I decided not to use it.
