@@ -54,7 +54,6 @@ function App() {
         <input className="Submit" type="submit" name="Shorten" />
       </form>
       {shortened != "" ?
-
         <a className="Shortened" href = {shortened}>
           {shortened}
         </a>

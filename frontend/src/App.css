@@ -61,9 +61,10 @@
 }
 
 .Submit {
-  border-radius: 5px;
   width: 20%;
   font-size: calc(10px + 1vmin);
+  color:#282c34;
+  background-color: #ccc ;
 }
 
 .Shortened {
