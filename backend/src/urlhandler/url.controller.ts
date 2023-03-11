@@ -7,15 +7,21 @@ import { ShortenURLDto } from './dtos/url.dto';
 export class UrlController {
     constructor(private service: UrlService) { }
 
-    //handl post requests to localhost:3000/shorten
-    @Post('shorten')
-    shortenUrl(
-        //take in argument of url with type ShortenURLDto
-        //body decorator will extract the body object and populate the url variable
-        @Body()
-        url: ShortenURLDto,
-    ) {
-        return this.service.shortenUrl(url);
+
+      @Post('shorten')
+async shortenUrl(
+  @Body() url: ShortenURLDto,
+  @Res() res, // inject the response object
+) {
+  res.setHeader('Content-Type', 'application/json'); 
+
+  const shortenedUrl = this.service.shortenUrl(url)
+          .then((shortenedUrl) => {
+            const shortenedUrlJson = shortenedUrl.toString();
+            return res.status(200).json({shortenedUrlJson});// wrap it in an object to return a JSON object
+});
+         
+      
     }
 
     //handle get requests to localhost://

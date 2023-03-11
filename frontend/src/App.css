@@ -9,13 +9,14 @@
 }
 
 .App-header {
-  font-size: calc(10px + 2vmin);
+  font-size: calc(40px + 1vmin);
   color: white;
 }
 
 .Subtitle {
   margin-top: 5px;
-  font-size: calc(3px + 2vmin);
+  margin-bottom: 10px;
+  font-size: calc(15px + 1vmin);
   font-style: italic;
   color: white;
 }
@@ -40,7 +41,7 @@
   background-color: #282c34;
   border-radius: 5px;
   color: #ccc;
-  font-size: calc(1px + 2vmin);
+  font-size: calc(10px + 1vmin);
 }
 
 .InputField:focus {
@@ -51,10 +52,31 @@
   outline-offset: 2px; 
 }
 
+.InputField:-webkit-autofill {
+  background-color: #282c34;
+  box-shadow: 0 0 5px;
+  border-radius: 5px;
+  outline: 2px white; /* change the color and size of the outline */
+  outline-offset: 2px; 
+}
+
 .Submit {
   border-radius: 5px;
   width: 20%;
-  font-size: calc(1px + 2vmin);
+  font-size: calc(10px + 1vmin);
+}
+
+.Shortened {
+  margin-top: 10px;
+  font-size: calc(15px + 1vmin);
+  color: white;
+}
+
+.Error {
+  margin-top: 10px;
+  font-size: calc(10px + 1vmin);
+  font-style: italic;
+  color:lightcoral;
 }
 
 @keyframes App-logo-spin {
