@@ -1,6 +1,8 @@
 # url-shortener
 A React.js x Nest.js project that takes in long urls and transforms it into short, easy-to-use urls.
 
+Click here to use: https://url-shortener-b938d.web.app/
+
 ## How it works
 1. Input a normal URL into the text box and press submit
 2. React frontend will send a POST request with the long url and receive a JSON payload consisting of the shortened URL
@@ -23,10 +25,10 @@ https://u.jing-xuanxuan2.repl.co/zm6UfxQ3-Y
 The test cases were made using Jest, and can be found in /backend/src/app.controller.spec.ts
 
 ## Nest.js backend
-The Get and Post requests are created using the Nest.js framework, and connected to a SQLite database. To run, cd backend and follow the instructions on the readme file in /backend.
+The Get and Post requests are created using the Nest.js framework, and connected to a SQLite database. To run locally, cd backend and follow the instructions on the readme file in /backend.
 
 ## React.js frontend
-The frontend interface is created with the React.js framework, featuring a simple input button to input your long url, and subsequently display the shortened url. Fetch methods were use to execute POST and GET requests to the backend. To run, cd frontend and follow the instructions on the readme file in /frontend.
+The frontend interface is created with the React.js framework, featuring a simple input button to input your long url, and subsequently display the shortened url. Fetch methods were use to execute POST and GET requests to the backend. To run locally, cd frontend and follow the instructions on the readme file in /frontend.
 
 
 
