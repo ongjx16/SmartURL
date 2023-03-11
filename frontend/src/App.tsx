@@ -5,13 +5,16 @@ import './App.css';
 function App() {
   const [inputvalue, setInputValue] = useState("");
   const [shortened, setShortened] = useState("");
+  //to show error message
   const [isValid, setIsValid] = useState(true);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    //reset values everytime a new query is made
     setShortened("");
     setIsValid(true);
-    //const longUrl = JSON.stringify({ longURL: inputvalue });
+   
     const data = { longUrl: inputvalue };
     fetch('https://u.jing-xuanxuan2.repl.co/shorten', {
       method: 'POST',

@@ -30,7 +30,9 @@ export class UrlService {
 
     //generates a unique string of 10 characters
     const urlCode = nanoid(10);
-    const baseURL = 'http://localhost:3000';
+
+    //baseurl is localhost if nestjs api is not deployed
+    const baseURL = 'https://u.jing-xuanxuan2.repl.co';
 
     try {
       //check if the URL has already been shortened (if it exists in the database)
