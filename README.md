@@ -3,6 +3,8 @@ A React.js x Nest.js project that takes in long urls and transforms it into shor
 
 Click here to use: https://url-shortener-b938d.web.app/
 
+*Do note that it might take a while for the first request to respond as the server hosting the Nest.js project has to run after being inactive for a while.*
+
 ## How it works
 1. Input a normal URL into the text box and press submit
 2. React frontend will send a POST request with the long url and receive a JSON payload consisting of the shortened URL
