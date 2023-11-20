@@ -1,4 +1,4 @@
-# url-shortener
+# Smart URL
 A React.js x Nest.js project that takes in long urls and transforms it into short, easy-to-use urls.
 
 Click here to use: https://url-shortener-b938d.web.app/
